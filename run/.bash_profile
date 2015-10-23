@@ -6,15 +6,16 @@ if [ -z "$BASH_VERSION" ]; then
   return
 fi
 
-# Fetch OS
+# Fetch the OS name.
 if [ "$(uname -s)" = "Darwin" ]; then
   OS="OSX"
 else
   OS=$(uname -s)
 fi
 
+# Read the modules.
 CURRENT_PATH=$(readlink -f "$BASH_SOURCE")
 DOTFILES_DIR=$(dirname "$(dirname "$CURRENT_PATH")")
 for DOTFILE in "$DOTFILES_DIR"/system/.{alias,env,function,path,prompt}; do
-  echo $DOTFILE
+  [ -f "$DOTFILE" ] && source "$DOTFILE"
 done
