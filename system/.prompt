@@ -1,1 +1,9 @@
 echo "Setting up the prompt."
+
+# We want colors.
+force_color_prompt=yes
+
+# Store our current prompt ... just in case.
+ORIG=$PS1
+
+PS1="\[\e[36m\]\u \[\e[m\]@ \[\e[33m\]\h \[\e[m\][\[\e[34m\]\w\[\e[m\]]: "
