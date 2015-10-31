@@ -1,5 +1,3 @@
-echo "Adding aliases."
-
 # List in long format, include dotfiles.
 alias l="ls -la"
 
@@ -10,3 +8,5 @@ alias ld="ls -ld */"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+
+alias dm="docker-machine"

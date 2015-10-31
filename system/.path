@@ -1,1 +1,3 @@
-echo "Setting the path."
+export GO="/usr/local/go"
+export GOPATH="$HOME/projects/go"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$DOTFILES_DIR/bin:$GO/bin:$GOPATH"

@@ -1,10 +1,10 @@
-echo "Installing brew."
-
 # Install homebrew.
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if [ ! -x "$(which brew)" ]; then
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # Update homebrew.
-brew update
+brew update 1>/dev/null
 brew upgrade
 
 # Apps to be installed by homebrew.
@@ -16,6 +16,7 @@ apps=(
   jq
   node
   nvm
+  packer
   tree
 )
 brew install "${apps[@]}"
@@ -24,10 +25,12 @@ brew install "${apps[@]}"
 ln -sf "$(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight" /usr/local/bin/diff-highlight
 
 # Fix nvm.
-mkdir ~/.nvm
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+if [ ! -d ~/.nvm ]; then
+  mkdir ~/.nvm
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh
+fi
 
 # Enable bash as shell.
-grep "/usr/local/bin/bash" /private/etc/shells &>/dev/null || sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
-chsh -s /usr/local/bin/bash
+# grep "/usr/local/bin/bash" /private/etc/shells &>/dev/null || sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
+# chsh -s /usr/local/bin/bash

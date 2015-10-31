@@ -1,5 +1,3 @@
-echo "Setting up the prompt."
-
 # We want colors.
 force_color_prompt=yes
 
