@@ -1,12 +1,11 @@
-source run/.bash_profile
-
 # Set up symlinks.
 if [ "$(uname)" == "Darwin" ]; then
-  ln -sfv ".dotfiles/run/.bash_profile" ~/.bash_profile
+  PROFILE=~/.bash_profile
 else
-  ln -sfv ".dotfiles/run/.bash_profile" ~/.bashrc
+  PROFILE=~/.bashrc
 fi
 
+ln -sfv ".dotfiles/run/.bash_profile" $PROFILE
 ln -sfv ".dotfiles/run/.inputrc" ~
 ln -sfv ".dotfiles/git/.gitconfig" ~
 ln -sfv ".dotfiles/git/.gitignore_global" ~
@@ -19,4 +18,9 @@ if [ "$(uname)" == "Darwin" ]; then
   # Install software.
   source install/brew.sh
   source install/brew-cask.sh
+fi
+
+# Install Atom packages.
+if [ -x "$(which apm)" ]; then
+  source install/atom.sh
 fi
