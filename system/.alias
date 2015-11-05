@@ -1,3 +1,6 @@
+# List in color
+alias ls="ls --color"
+
 # List in long format, include dotfiles.
 alias l="ls -la"
 
