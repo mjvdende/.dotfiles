@@ -9,6 +9,7 @@ atom
   caffeine
   google-chrome
   iterm2
+  sequel-pro
   skype
   slack
   spotify
