@@ -12,4 +12,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-alias dm="docker-machine"
+if [ "$(uname)" == "Darwin" ]; then
+  alias dm="docker-machine"
+fi
