@@ -1,13 +1,13 @@
 [user]
-    name = Erik Veld
-    email = eveld@xebia.com
+    name = Maarten van den Ende
+    email = maartenvdende@gmail.com
 
 [github]
-    user = eveld
+    user = mjvdende
 
 [core]
     excludesfile = ~/.gitignore_global
-    editor = nano
+    editor = vim
     filemode = false
     trustctime = false
 
