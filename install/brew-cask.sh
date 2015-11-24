@@ -5,17 +5,16 @@ fi
 
 # Apps to be installed by homebrew cask.
 apps=(
-atom
-  caffeine
+  atom
   google-chrome
   iterm2
   sequel-pro
   skype
   slack
-  spotify
   transmission
   tunnelblick
   vagrant
   virtualbox
+  google-drive
 )
 brew cask install "${apps[@]}"
