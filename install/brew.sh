@@ -18,8 +18,11 @@ apps=(
   node
   nvm
   packer
+  terraform
   tree
   wget
+  fleetctl
+  spark
 )
 brew install "${apps[@]}"
 brew install mysql --client-only

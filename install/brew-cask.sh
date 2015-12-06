@@ -5,16 +5,27 @@ fi
 
 # Apps to be installed by homebrew cask.
 apps=(
+  appium
+  android-studio
   atom
+  bettertouchtool
+  caffeine
+  dockertoolbox
+  filezilla
   google-chrome
+  google-drive
+  intellij-idea
   iterm2
+  keepassx
   sequel-pro
+  skitch
   skype
   slack
+  sourcetree
+  steam
   transmission
   tunnelblick
   vagrant
   virtualbox
-  google-drive
 )
 brew cask install "${apps[@]}"
