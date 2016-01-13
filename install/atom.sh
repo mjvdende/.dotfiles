@@ -11,6 +11,7 @@ packages=(
   linter-govet
   linter-jsonlint
   linter-shellcheck
+  merge-conflicts
 )
 
 apm install "${packages[@]}"

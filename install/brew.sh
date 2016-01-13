@@ -9,9 +9,11 @@ brew upgrade
 
 # Apps to be installed by homebrew.
 apps=(
+  ansible
   awscli
   bash
   coreutils
+  fontconfig
   git
   jq
   md5sha1sum

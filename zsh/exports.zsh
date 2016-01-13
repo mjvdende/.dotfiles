@@ -4,6 +4,8 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 
 export JAVA_HOME="`/usr/libexec/java_home -v 1.7`"
 
+export ANSIBLE_HOSTS=$HOME/.ansible/hosts
+
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
