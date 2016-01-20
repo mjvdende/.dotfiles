@@ -21,3 +21,6 @@ alias tf='terraform'
 
 # sourcetree
 alias sourcetree='open -a SourceTree'
+
+# Quby
+alias q='cd ~/projects/quby'

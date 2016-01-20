@@ -23,6 +23,7 @@ apps=(
   slack
   sourcetree
   steam
+  postgres
   transmission
   tunnelblick
   vagrant
