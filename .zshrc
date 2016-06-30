@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/mjvdende/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -50,12 +50,9 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(git python zsh-syntax-highlighting)
 
 # User configuration
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,7 +81,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/.secrets.zsh
-source ~/.dotfiles/zsh/functions.zsh
-source ~/.dotfiles/zsh/aliases.zsh
-source ~/.dotfiles/zsh/exports.zsh
+source ~/.secrets
+source ~/.dotfiles/system/functions.zsh
+source ~/.dotfiles/system/aliases.zsh
+source ~/.dotfiles/system/exports.zsh
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

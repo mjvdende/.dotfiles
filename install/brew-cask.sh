@@ -10,7 +10,6 @@ apps=(
   atom
   bettertouchtool
   caffeine
-  dockertoolbox
   filezilla
   google-chrome
   google-drive

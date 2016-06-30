@@ -38,7 +38,3 @@ if [ ! -d ~/.nvm ]; then
   export NVM_DIR=~/.nvm
   source $(brew --prefix nvm)/nvm.sh
 fi
-
-# Enable bash as shell.
-# grep "/usr/local/bin/bash" /private/etc/shells &>/dev/null || sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
-# chsh -s /usr/local/bin/bash
