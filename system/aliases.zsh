@@ -30,6 +30,7 @@ alias che='/Users/mjvdende/Applications/eclipse-che-4.0.0-RC11/bin/che.sh'
 # Directories
 alias p='cd ~/projects'
 alias q='cd ~/projects/quby'
+alias pb='cd ~/projects/portbase'
 alias nxt='cd ~/projects/quby/nxt'
 
 # Java Home
