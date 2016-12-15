@@ -21,6 +21,8 @@ alias brewski='brew update && brew upgrade --all && brew cleanup -s; brew doctor
 alias dm='docker-machine'
 alias evalDkr='eval "$(docker-machine env dkr)"'
 alias gc-docker='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc'
+alias drm='docker ps -qa | xargs docker rm -f'
+alias drmi='docker images -q -f "dangling=true" | xargs  docker rmi'
 
 # apps
 alias tf='terraform'
