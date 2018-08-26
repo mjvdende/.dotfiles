@@ -16,5 +16,4 @@ alias drmi='docker images -q -f "dangling=true" | xargs  docker rmi'
 
 # Directories
 alias p='cd ~/projects'
-alias sh='cd ~/schiphol'
-
+alias s='cd ~/schiphol'
