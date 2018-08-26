@@ -7,24 +7,16 @@ fi
 apps=(
   appium
   android-studio
-  atom
   bettertouchtool
   caffeine
-  filezilla
   google-chrome
   google-drive
-  intellij-idea
   iterm2
   keepassx
-  sequel-pro
   skitch
   skype
   slack
-  sourcetree
   steam
-  postgres
-  transmission
-  tunnelblick
   vagrant
   virtualbox
 )
