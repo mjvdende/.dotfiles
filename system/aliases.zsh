@@ -1,5 +1,5 @@
 # List in color
-alias ls="ls -color"
+alias ls="ls --color"
 
 # List in long format, include dotfiles.
 alias l="ls -la"
@@ -18,5 +18,3 @@ alias drmi='docker images -q -f "dangling=true" | xargs  docker rmi'
 alias p='cd ~/projects'
 alias s='cd ~/schiphol'
 
-# Tooling
-alias nw='nightwatch'

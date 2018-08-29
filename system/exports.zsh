@@ -1,8 +1,8 @@
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 export EDITOR="code"
-export CLICOLOR=1
-export LSCOLORS=gxfxcxdxbxegedabagacad
+# export CLICOLOR=1
+# export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # npm
 export PATH=~/.npm-global/bin:$PATH
