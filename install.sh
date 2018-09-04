@@ -48,6 +48,11 @@ pip3 install thefuck
 
 sudo snap install mailspring
 
+# monitor docker containers
+
+sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.1/ctop-0.7.1-linux-amd64  -O /usr/local/bin/ctop
+sudo chmod +x /usr/local/bin/ctop
+
 # Set up symlinks.
 ln -sfv ".dotfiles/.zshrc" $HOME
 ln -sfv ".dotfiles/.vimrc" $HOME
