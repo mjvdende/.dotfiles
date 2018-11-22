@@ -1,8 +1,13 @@
+
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=$PATH:/Users/mjvdende/.minimesos/bin
 
 export EDITOR="atom"
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
+
+export DOCKER_HUB_USER="mjvdende"
+export PATH=$PATH:/Users/mjvdende/.composer/vendor/bin
 
 # Typo
 eval "$(thefuck --alias fuck)"
@@ -12,9 +17,15 @@ PATH=/Applications/Firefox.app/Contents/MacOS:$PATH
 
 # Java
 export JAVA_HOME="`/usr/libexec/java_home -v 1.8`"
+# export MAVEN_OPTS="-Dmaven.artifact.threads=8 -Djava.awt.headless=true -Xms256m -Xmx2048m -XX:MaxPermSize=1024m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Xss512k"
 
 # Ansible
 export ANSIBLE_HOSTS=$HOME/.ansible/hosts
+
+# AutoComplete Brew
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+	. $(brew --prefix)/etc/bash_completion
+fi
 
 # Quby
 export OS_PROJECT_NAME=cicd
@@ -38,15 +49,11 @@ source '/Users/mjvdende/google-cloud-sdk/path.zsh.inc'
 # The next line enables shell command completion for gcloud.
 source '/Users/mjvdende/google-cloud-sdk/completion.zsh.inc'
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
-
-# rvm
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# flutter & dart
+export PATH=/usr/local/flutter/bin:$PATH
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/mjvdende/.sdkman"
 [[ -s "/Users/mjvdende/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mjvdende/.sdkman/bin/sdkman-init.sh"
+
