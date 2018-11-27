@@ -3,12 +3,12 @@ Set up my computers to their desired states.
 
 # How?
 
-clone repo in home dir
+clone repo in home dir en select correct branch
 
 ```./install.sh```
 
 
-# automate
+# todo automate
 
 - use ```snap```?
 - azure-cli
