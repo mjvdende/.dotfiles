@@ -29,9 +29,6 @@ apps=(
 brew install "${apps[@]}"
 brew install mysql --client-only
 
-# Git comes with diff-highlight, but isn't in the PATH
-ln -sf "$(brew --prefix)/share/git-core/contrib/diff-highlight/diff-highlight" /usr/local/bin/diff-highlight
-
 # Fix nvm.
 if [ ! -d ~/.nvm ]; then
   mkdir ~/.nvm
