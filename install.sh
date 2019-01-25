@@ -41,7 +41,8 @@ sudo apt-get install -y google-chrome-stable \
                    apt-transport-https \
                    ca-certificates \
                    curl \
-                   software-properties-common
+                   software-properties-commo \
+		   blueman
 
 pip3 install awscli --upgrade --user
 pip3 install thefuck 

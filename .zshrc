@@ -57,7 +57,7 @@ DEFAULT_USER=`whoami`
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python zsh-syntax-highlighting)
+plugins=(git python zsh-syntax-highlighting zsh-autosuggestions)
 
 # User configuration
 
@@ -91,3 +91,18 @@ source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/system/functions.zsh
 source ~/.dotfiles/system/aliases.zsh
 source ~/.dotfiles/system/exports.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# added by travis gem
+[ -f /home/maarten/.travis/travis.sh ] && source /home/maarten/.travis/travis.sh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
