@@ -20,37 +20,41 @@ sudo add-apt-repository \
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list '
 
+# gcloud sdk
+export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+
 # nodejs
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
 sudo apt-get update
-sudo apt-get install -y google-chrome-stable \
-                   nodejs \
-                   docker-ce \
-                   build-essential \
-                   openssh-server \
-                   vim \
-                   shutter \
-                   slack \
-                   keepassx \
-                   jq \
-                   webhttrack \
-                   htop \
-                   python3-pip \
-                   terminator \
-                   apt-transport-https \
-                   ca-certificates \
-                   curl \
-                   software-properties-commo \
-		   blueman
+sudo apt-get -y upgrade
+sudo apt-get install -y ca-certificates \
+    build-essential \
+    vim \
+    nodejs \
+    docker-ce \
+    curl \
+    openssh-server \
+    google-chrome-stable \
+    slack \
+    flameshot \
+    keepassx \
+    jq \
+    webhttrack \
+    htop \
+    python3-pip \
+    terminator \
+    apt-transport-https \
+    software-properties-commo \
+    google-cloud-sdk
 
 pip3 install awscli --upgrade --user
-pip3 install thefuck 
-
-sudo snap install mailspring
+pip3 install thefuck virtualenv
+pip3 install virtalenvwrapper
 
 # monitor docker containers
-
 sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.1/ctop-0.7.1-linux-amd64  -O /usr/local/bin/ctop
 sudo chmod +x /usr/local/bin/ctop
 

@@ -13,6 +13,7 @@ alias glall='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PW
 # Docker
 alias drm='docker ps -qa | xargs docker rm -f'
 alias drmi='docker images -q -f "dangling=true" | xargs  docker rmi'
+alias dkrrh='docker ps -qa | xargs docker rm -f && docker images -q -f "dangling=true" | xargs  docker rmi'
 
 # Directories
 alias p='cd ~/projects'

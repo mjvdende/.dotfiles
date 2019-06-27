@@ -23,10 +23,10 @@ DEFAULT_USER=`whoami`
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE=false
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=7
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -91,18 +91,19 @@ source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/system/functions.zsh
 source ~/.dotfiles/system/aliases.zsh
 source ~/.dotfiles/system/exports.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # added by travis gem
-[ -f /home/maarten/.travis/travis.sh ] && source /home/maarten/.travis/travis.sh
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+[[ -f $HOME/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . $HOME/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+[[ -f $HOME/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . $HOME/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f $HOME/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . $HOME/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh

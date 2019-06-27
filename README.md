@@ -1,14 +1,14 @@
 # .files
+
 Set up my computers to their desired states.
 
-# How?
+## How
 
 clone repo in home dir
 
 ```./install.sh```
 
-
-# automate
+## Automate
 
 - use ```snap```?
 - azure-cli
@@ -27,4 +27,3 @@ clone repo in home dir
 >> - hide activities button
 >> - workspace indicator
 - install global npm tools
-
