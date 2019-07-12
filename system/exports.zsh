@@ -10,18 +10,18 @@ export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 # Python
 export WORKON_HOME="$HOME/.envs"
 # https://python-guide-cn.readthedocs.io/en/latest/dev/virtualenvs.html
-source /usr/local/bin/virtualenvwrapper.sh
+# first have default env created!
+source ~/.envs/default/bin/activate
+# Python: fuck --yeah
+eval $(thefuck --alias)
 
 # npm
 export PATH=~/.npm-global/bin:$PATH
 
-# fuck --yeah
-eval $(thefuck --alias)
+# export GOPATH="$HOME/go"
+# export GOROOT="/snap/go/3417"
 
-export GOPATH="$HOME/go"
-export GOROOT="/snap/go/3417"
-
-source $HOME/.rvm/scripts/rvm
+# source $HOME/.rvm/scripts/rvm
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

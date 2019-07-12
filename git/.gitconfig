@@ -1,6 +1,6 @@
 [user]
 	name = Maarten
-    email = maartenvdende@gmail.com
+    email = maarten@buildeleven.nl
 
 [github]
     user = mjvdende
@@ -21,4 +21,4 @@
     default = simple
 
 [fetch]
-  prune = true
+    prune = true
