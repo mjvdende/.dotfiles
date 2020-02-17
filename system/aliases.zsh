@@ -14,8 +14,10 @@ alias glall='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PW
 alias drm='docker ps -qa | xargs docker rm -f'
 alias drmi='docker images -q -f "dangling=true" | xargs  docker rmi'
 alias dkrrh='docker ps -qa | xargs docker rm -f && docker images -q -f "dangling=true" | xargs  docker rmi'
+# Docker apps
+alias swagger='docker run -d -p 80:8080 swaggerapi/swagger-editor'
 
 # Directories
 alias p='cd ~/projects'
-alias s='cd ~/schiphol'
+alias e='cd ~/projects/eneco'
 

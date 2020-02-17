@@ -104,3 +104,13 @@ source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/system/functions.zsh
 source ~/.dotfiles/system/aliases.zsh
 source ~/.dotfiles/system/exports.zsh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /home/maarten/.npm-global/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
