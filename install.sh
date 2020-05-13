@@ -22,7 +22,3 @@ if [ ! -e ~/.sdkman/bin/sdkman-init.sh ]; then
   source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
 
-# Install Atom packages.
-if [ -x "$(which apm)" ]; then
-  source install/atom.sh
-fi

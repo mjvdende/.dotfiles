@@ -27,7 +27,7 @@ apps=(
   spark
 )
 brew install "${apps[@]}"
-brew install mysql --client-only
+# brew install mysql --client-only
 
 # Fix nvm.
 if [ ! -d ~/.nvm ]; then
