@@ -1,6 +1,6 @@
 [user]
-    name = Maarten van den Ende
-    email = 
+	name = Maarten van den Ende
+	email = maarten@buildeleven.nl
 
 [github]
     user = mjvdende
@@ -46,3 +46,5 @@
 
 [fetch]
   prune = true
+[pull]
+	rebase = false

@@ -16,22 +16,11 @@ apps=(
   fontconfig
   git
   jq
-  md5sha1sum
   node
   nvm
-  packer
   terraform
   tree
   wget
-  fleetctl
-  spark
 )
 brew install "${apps[@]}"
 # brew install mysql --client-only
-
-# Fix nvm.
-if [ ! -d ~/.nvm ]; then
-  mkdir ~/.nvm
-  export NVM_DIR=~/.nvm
-  source $(brew --prefix nvm)/nvm.sh
-fi

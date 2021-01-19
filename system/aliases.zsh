@@ -12,7 +12,7 @@ alias ....="cd ../../.."
 # git - pull all
 alias glall='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
 # updates
-alias brewski='brew update && brew upgrade --all && brew cleanup -s; brew doctor'
+alias brewski='brew update && brew upgrade && brew cleanup -s; brew doctor'
 
 # docker-machine
 alias drm='docker ps -qa | xargs docker rm -f'
@@ -20,5 +20,8 @@ alias drmi='docker images -q -f "dangling=true" | xargs  docker rmi'
 
 # Directories
 alias p='cd ~/projects'
-alias s='cd ~/schiphol'
+alias m='cd ~/projects/dpg'
 
+# Android
+# emulator-5554
+alias adv='./adb shell setprop debug.firebase.analytics.app com.afrogleap.eneco.myeneco.debug'
