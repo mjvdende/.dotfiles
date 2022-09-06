@@ -10,23 +10,11 @@ if [ ! -d "$ZSH" ]; then
 fi
 
 # docker
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
+# todo
 
-# chrome
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list '
-
-# gcloud sdk
-export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
-echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
 # nodejs
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+# todo use nvm 
 
 sudo apt-get update
 sudo apt-get -y upgrade

@@ -5,21 +5,16 @@ export EDITOR="vim"
 # export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # Java
-export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
+export JAVA_HOME="$HOME/.sdkman/candidates/java/bin/current"
 
-# Python
-export WORKON_HOME="$HOME/.envs"
-# https://python-guide-cn.readthedocs.io/en/latest/dev/virtualenvs.html
-source /usr/local/bin/virtualenvwrapper.sh
+# # Python
+# export WORKON_HOME="$HOME/.envs"
+# # https://python-guide-cn.readthedocs.io/en/latest/dev/virtualenvs.html
+# source /usr/local/bin/virtualenvwrapper.sh
 
 # npm
 export PATH=~/.npm-global/bin:$PATH
 
-# fuck --yeah
-eval $(thefuck --alias)
-
-export GOPATH="$HOME/go"
-export GOROOT="/snap/go/3417"
 
 source $HOME/.rvm/scripts/rvm
 

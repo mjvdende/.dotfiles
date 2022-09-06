@@ -17,5 +17,5 @@ alias dkrrh='docker ps -qa | xargs docker rm -f && docker images -q -f "dangling
 
 # Directories
 alias p='cd ~/projects'
-alias s='cd ~/schiphol'
+
 
