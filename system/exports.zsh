@@ -1,16 +1,8 @@
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
 export EDITOR="vim"
-# export CLICOLOR=1
-# export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # Java
 export JAVA_HOME="$HOME/.sdkman/candidates/java/bin/current"
-
-# # Python
-# export WORKON_HOME="$HOME/.envs"
-# # https://python-guide-cn.readthedocs.io/en/latest/dev/virtualenvs.html
-# source /usr/local/bin/virtualenvwrapper.sh
 
 # npm
 export PATH=~/.npm-global/bin:$PATH

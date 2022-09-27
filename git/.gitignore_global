@@ -1,2 +1,10 @@
 .DS_Store
 .idea/
+
+.secrets
+secrets
+local.properties
+
+node_modules/
+.env
+
