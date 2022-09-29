@@ -8,7 +8,7 @@ sudo apt-get install -y build-essential \
     jq \
     python3-pip
 
-pip3 install virtualenv
+pip3 install virtualenv virtualenvwrapper
 
 # Install sdkman.
 if [ ! -e ~/.sdkman/bin/sdkman-init.sh ]; then

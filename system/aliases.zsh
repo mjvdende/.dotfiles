@@ -18,4 +18,6 @@ alias dkrrh='docker ps -qa | xargs docker rm -f && docker images -q -f "dangling
 # Directories
 alias p='cd ~/projects'
 
-
+# Python
+## just here so I don't forget the most useful ones
+lsvenv='lsvirtualenv'

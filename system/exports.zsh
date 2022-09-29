@@ -4,6 +4,14 @@ export EDITOR="vim"
 # Java
 export JAVA_HOME="$HOME/.sdkman/candidates/java/bin/current"
 
+# Python 
+export WORKON_HOME="$HOME/.envs"
+## https://python-guide-cn.readthedocs.io/en/latest/dev/virtualenvs.html
+## and https://virtualenvwrapper.readthedocs.io/en/latest/tips.html
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+source /usr/local/bin/virtualenvwrapper.sh
+
 # npm
 export PATH=~/.npm-global/bin:$PATH
 
