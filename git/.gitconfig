@@ -10,6 +10,7 @@
     editor = vim
     filemode = false
     trustctime = false
+	autocrlf = input
 
 [color]
     ui = auto
@@ -45,6 +46,6 @@
     default = simple
 
 [fetch]
-  prune = true
+    prune = true
 [pull]
 	rebase = false

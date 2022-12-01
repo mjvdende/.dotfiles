@@ -1,7 +1,6 @@
 # Set up symlinks.
 ln -sfv ".dotfiles/.zshrc" $HOME
 ln -sfv ".dotfiles/.vimrc" $HOME
-# mkdir -p $HOME/.vim/colors && cp ".dotfiles/.vim/colors/*.vim" $HOME/.vim/colors/
 
 # Set up git
 ln -sfv ".dotfiles/git/.gitconfig" $HOME
@@ -29,9 +28,5 @@ if [ ! -e ~/.sdkman/bin/sdkman-init.sh ]; then
   source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
 
-# TODO install jenv (set java version)
-# TODO install rvm (needed for ex. ios dev)
-# TODO document python install
-# canonical https://realpython.com/intro-to-pyenv/
 
 

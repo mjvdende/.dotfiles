@@ -20,8 +20,6 @@ alias drmi='docker images -q -f "dangling=true" | xargs  docker rmi'
 
 # Directories
 alias p='cd ~/projects'
-alias m='cd ~/projects/dpg'
+alias c='cd ~/projects/chess'
+alias cli='cd ~/projects/chess/chess-cli'
 
-# Android
-# emulator-5554
-alias adv='./adb shell setprop debug.firebase.analytics.app com.afrogleap.eneco.myeneco.debug'

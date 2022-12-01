@@ -37,4 +37,3 @@ function killProcessListeningToPort() {
 	fi
 	lsof -i TCP:$1 | awk '/LISTEN/{print $2}' | xargs kill -9
 }
-
