@@ -1,17 +1,16 @@
 [user]
 	name = Maarten van den Ende
 	email = maarten@vandenende.it
-
 [github]
     user = mjvdende
-
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim
     filemode = false
     trustctime = false
 	autocrlf = input
-
+	fsmonitor = true
+	untrackedcache = true
 [color]
     ui = auto
 [color "branch"]
@@ -32,20 +31,25 @@
     oldHighlight = "red bold 52"
     newNormal = "green bold"
     newHighlight = "green bold 22"
-
 [credential]
     helper = osxkeychain
-
 [grep]
     lineNumber = true
-
 [help]
     autocorrect = 1
-
 [push]
     default = simple
-
 [fetch]
     prune = true
 [pull]
 	rebase = false
+[diff]
+    colorMoved = zebra
+[init]
+    defaultBranch = main
+[includeIf "gitdir:~/projects/lely/"]
+    path = ~/projects/lely/.gitconfig.contract
+[includeIf "gitdir:~/projects/postnl/"]
+    path = ~/projects/postnl/.gitconfig.contract
+[status]
+	showuntrackedfiles = all

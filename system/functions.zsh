@@ -1,3 +1,14 @@
+function activate() {
+    local venv_name=${1:-.venv}  # Use the first argument as the venv name; default to '.venv'
+    
+    if [ -d "$venv_name" ]; then
+        source "$venv_name/bin/activate"
+        echo "Activated virtual environment: $venv_name"
+    else
+        echo "Error: No virtual environment named '$venv_name' found in $(pwd)."
+    fi
+}
+
 function extract {
   echo Extracting $1 ...
   if [ -f $1 ] ; then

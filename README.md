@@ -5,4 +5,4 @@ Set up my computers to their desired states.
 
 git clone this repo in $HOME
 
-```cd .dotfiles && ./install.sh```
+check install.sh
