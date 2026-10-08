@@ -10,6 +10,11 @@ if [ -d "/opt/homebrew/bin" ]; then
     export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 fi
 
+# Prefer Keeper's SSH agent when its socket is available.
+if [[ -n "$TMPDIR" && -S "${TMPDIR%/}/keeper-ssh-agent.sock" ]]; then
+    export SSH_AUTH_SOCK="${TMPDIR%/}/keeper-ssh-agent.sock"
+fi
+
 export EDITOR="code"
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
