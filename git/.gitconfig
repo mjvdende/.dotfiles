@@ -32,7 +32,7 @@
     newNormal = "green bold"
     newHighlight = "green bold 22"
 [credential]
-    helper = osxkeychain
+	helper = store
 [grep]
     lineNumber = true
 [help]
@@ -47,9 +47,7 @@
     colorMoved = zebra
 [init]
     defaultBranch = main
-[includeIf "gitdir:~/projects/lely/"]
-    path = ~/projects/lely/.gitconfig.contract
-[includeIf "gitdir:~/projects/postnl/"]
-    path = ~/projects/postnl/.gitconfig.contract
+[include]
+    path = ~/.gitconfig.local
 [status]
 	showuntrackedfiles = all

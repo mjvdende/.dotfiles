@@ -10,11 +10,23 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 # git - pull all
-alias glall='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
+alias glall='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin main \;'
 
 # brew updates
 alias brewski='brew update && brew upgrade && brew cleanup -s; brew doctor'
 
 # Directories
 alias p='cd ~/projects'
-alias po='cd ~/projects/postnl'
+alias e='cd "$CONTRACT_PROJECT_DIR"'
+
+# Tooling
+alias k='kubectl'
+alias d='docker'
+alias dc='docker-compose'
+
+# Search
+alias g='grep -i'
+alias gf='grep -i -r . -e'
+
+# Fuzzy finding
+alias f='fzf'

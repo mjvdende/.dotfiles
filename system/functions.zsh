@@ -22,9 +22,9 @@ function extract {
           *.tbz2)      tar xjf $1  ;;
           *.tgz)       tar xzf $1  ;;
           *.zip)       unzip $1   ;;
-          *.Z)         uncompress $1  ;;
-          *.7z)        7z x $1  ;;
-          *)        echo "'$1' cannot be extracted via extract()" ;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1  ;;
+            *)           echo "'$1' cannot be extracted via extract()" ;;
       esac
   else
       echo "'$1' is not a valid file"
@@ -34,7 +34,7 @@ function extract {
 function getRemoteBranches {
   for branch in `git branch -a | grep remotes | grep -v HEAD | grep -v master `; do
      git branch --track ${branch#remotes/origin/} $branch
-  	done
+  done
 }
 
 ## Print a horizontal rule
@@ -44,7 +44,7 @@ rule () {
 function killProcessListeningToPort() {
 	if [ -z "$1" ]; then
 		echo "Usage: searchAndDestroy [numeric port identifier]" >&2
-	        return 1
+		return 1
 	fi
 	lsof -i TCP:$1 | awk '/LISTEN/{print $2}' | xargs kill -9
 }
