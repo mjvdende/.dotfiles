@@ -22,6 +22,15 @@ ln -sfv "$DOTFILES_DIR/.vimrc" "$HOME/.vimrc"
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" "$HOME/.gitconfig"
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" "$HOME/.gitignore_global"
 
+# Set up ssh: include shared snippets, keep machine-specific hosts in ~/.ssh/config.
+mkdir -p "$HOME/.ssh" && chmod 700 "$HOME/.ssh"
+touch "$HOME/.ssh/config" && chmod 600 "$HOME/.ssh/config"
+SSH_INCLUDE="Include ${DOTFILES_DIR/#$HOME/~}/ssh/*.conf"
+if ! grep -qxF "$SSH_INCLUDE" "$HOME/.ssh/config"; then
+	printf '%s\n\n' "$SSH_INCLUDE" | cat - "$HOME/.ssh/config" > "$HOME/.ssh/config.tmp" \
+		&& mv "$HOME/.ssh/config.tmp" "$HOME/.ssh/config" && chmod 600 "$HOME/.ssh/config"
+fi
+
 # Install dependencies.
 source install/brew.sh
 source install/node.sh
